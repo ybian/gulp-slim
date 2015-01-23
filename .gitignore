@@ -1,4 +1,3 @@
 node_modules/
 temp/
-*.log
-index.js
+.log
