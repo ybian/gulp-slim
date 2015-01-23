@@ -21,7 +21,9 @@ module.exports = (options = {}) ->
   args.push '-c' if options.compile
   args.push '--rails' if options.rails
   args.push '-t' if options.translator
-  args.push '-l' if options.logicLess
+  if options.locals
+    args.push '-l'
+    args.push options.locals
 
   if options.options
     if options.options.constructor is Array
